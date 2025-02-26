@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Кардиологический калькулятор</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.CSS">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="absolute-block">
+                <div class="counts" id="indexes">
+                    <div class="count" id="bladEffect">
+                        <div class="count_block">
+                            <input type="text" id="textArea" class="count__textarea"
+                                placeholder="Систолическое давление" id="sistolic">
+                            <ul class="count__buttons">
+                                <button class="button clear">Очистить</button>
+                                <button class="button okay">OK</button>
+                            </ul>
+                        </div>
+                        <div class="count_block">
+                            <input type="text" class="count__textarea" placeholder="Диастолическое давление"
+                                id="diastolic">
+                            <ul class="count__buttons">
+                                <button class="button clear">Очистить</button>
+                                <button class="button okay">OK</button>
+                            </ul>
+                        </div>
+                        <div class="count_block">
+                            <input type="text" class="count__textarea" placeholder="Частота сердечных сокращений"
+                                id="hardReductionFreque">
+                            <ul class="count__buttons">
+                                <button class="button clear">Очистить</button>
+                                <button class="button okay">OK</button>
+                            </ul>
+                        </div>
+                        <div class="count_button-wrap">
+                            <button class="count_button"
+                                id="theCoefficientOfBloodCirculationReversibility">Рассчитать</button>
+                        </div>
+                    </div>
+                    <div class="count" id="kerdo">
+                        <div class="count_block">
+                            <input type="text" class="count__textarea" id="sHardReductionFreque"
+                                placeholder="Частота сердечный сокращений">
+                            <ul class="count__buttons">
+                                <button class="button clear">Очистить</button>
+                                <button class="button okay">OK</button>
+                            </ul>
+                        </div>
+                        <div class="count_block">
+                            <input type="text" class="count__textarea" id="arterialPressure"
+                                placeholder="Артериальное давление">
+                            <ul class="count__buttons">
+                                <button class="button clear">Очистить</button>
+                                <button class="button okay">OK</button>
+                            </ul>
+                        </div>
+                        <div class="count_button-wrap">
+                            <button class="count_button" id="kerdoCount">Рассчитать</button>
+                        </div>
+                    </div>
+                    <div class="count" id="circadeIndex">
+                        <div class="count_block">
+                            <input type="text" class="count__textarea" id="middleNoonHardFrequency"
+                                placeholder="Средняя дненая ЧСС">
+                            <ul class="count__buttons">
+                                <button class="button clear">Очистить</button>
+                                <button class="button okay">OK</button>
+                            </ul>
+                        </div>
+                        <div class="count_block">
+                            <input type="text" class="count__textarea" id="middleNightHardFrequency"
+                                placeholder="Средняя ночная ЧСС">
+                            <ul class="count__buttons">
+                                <button class="button clear">Очистить</button>
+                                <button class="button okay">OK</button>
+                            </ul>
+                        </div>
+                        <div class="count_button-wrap">
+                            <button class="count_button" id="circadeCount">Рассчитать</button>
+                        </div>
+                    </div>
+                    <div class="count" id="potencial">
+                        <div class="count_block">
+                            <input type="text" class="count__textarea" placeholder="Частота пульса">
+                            <ul class="count__buttons">
+                                <button class="button clear">Очистить</button>
+                                <button class="button okay">OK</button>
+                            </ul>
+                        </div>
+                        <div class="count_block">
+                            <input type="text" class="count__textarea"
+                                placeholder="Систолическое артериальное давление">
+                            <ul class="count__buttons">
+                                <button class="button clear">Очистить</button>
+                                <button class="button okay">OK</button>
+                            </ul>
+                        </div>
+                        <div class="count_block">
+                            <input type="text" class="count__textarea"
+                                placeholder="Диастолическое артериальное давление">
+                            <ul class="count__buttons">
+                                <button class="button clear">Очистить</button>
+                                <button class="button okay">OK</button>
+                            </ul>
+                        </div>
+                        <div class="count_block">
+                            <input type="text" class="count__textarea" placeholder="Возраст">
+                            <ul class="count__buttons">
+                                <button class="button clear">Очистить</button>
+                                <button class="button okay">OK</button>
+                            </ul>
+                        </div>
+                        <div class="count_block">
+                            <input type="text" class="count__textarea" placeholder="Масса тела">
+                            <ul class="count__buttons">
+                                <button class="button clear">Очистить</button>
+                                <button class="button okay">OK</button>
+                            </ul>
+                        </div>
+                        <div class="count_block">
+                            <input type="text" class="count__textarea" placeholder="Рост">
+                            <ul class="count__buttons">
+                                <button class="button clear">Очистить</button>
+                                <button class="button okay">OK</button>
+                            </ul>
+                        </div>
+                        <div class="count_button-wrap">
+                            <button class="count_button okay" id="adaptivePotencial">Рассчитать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator">
+                    <ul class="operations" id="operation">
+                        <button class="operations__item" id="bloodCirculationCoefficient">КЭК</button>
+                        <button class="operations__item" id="kerdoVegetativeIndex">ВИК</button>
+                        <button class="operations__item" id="circadianIndex">ЦИ</button>
+                        <button class="operations__item" id="adaptivePotential">АП</button>
+                    </ul>
+                    <ul class="numbers" id="operation">
+                        <button class="numbers__item">1</button>
+                        <button class="numbers__item">2</button>
+                        <button class="numbers__item">3</button>
+                        <button class="numbers__item">4</button>
+                        <button class="numbers__item">5</button>
+                        <button class="numbers__item">6</button>
+                        <button class="numbers__item">7</button>
+                        <button class="numbers__item">8</button>
+                        <button class="numbers__item">9</button>
+                        <button class="numbers__item">0</button>
+                    </ul>
+                </div>
+                <div class="result-block">
+                    <div id="text">
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="JS/script.JS"></script>
+</body>
+
+</html>
